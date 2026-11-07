@@ -1,0 +1,570 @@
+
+/* ========================================
+   HOME PAGE
+======================================== */
+
+:root {
+    --gold: #e8b65c;
+    --gold-light: #ffe1a0;
+    --gold-dark: #a87932;
+    --bg: #080b09;
+    --card: #111712;
+    --text: #f5f3ed;
+    --muted: #a6a69f;
+    --line: rgba(232, 182, 92, 0.2);
+}
+
+/* ========================================
+   GENERAL PAGE
+======================================== */
+
+.page-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    min-height: 650px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.hero-copy {
+    max-width: 650px;
+}
+
+.hero-copy h1 {
+    color: var(--text);
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 560px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+
+.actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    color: #080b09;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    color: var(--gold);
+    background: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(232, 182, 92, 0.12);
+}
+
+.text-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: var(--gold-light);
+}
+
+/* HERO BOTTOM */
+
+.hero-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 1px solid var(--line);
+    padding-top: 25px;
+}
+
+.hero-bottom div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero-bottom span {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hero-bottom p {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* ========================================
+   LAMP SCENE
+======================================== */
+
+.lamp-scene {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
+    overflow: hidden;
+}
+
+.lamp-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(232, 182, 92, 0.12);
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+.lamp-orbit {
+    position: absolute;
+    border: 1px solid rgba(232, 182, 92, 0.22);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    width: 390px;
+    height: 390px;
+    animation: orbit 25s linear infinite;
+}
+
+.orbit-two {
+    width: 310px;
+    height: 310px;
+    border-style: dashed;
+    animation: orbitReverse 30s linear infinite;
+}
+
+.lamp-shade {
+    position: absolute;
+    z-index: 4;
+    top: 100px;
+    left: 50%;
+    width: 180px;
+    height: 100px;
+    background: linear-gradient(145deg, #f2cf87, #9f702f);
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+    transform: translateX(-50%);
+    box-shadow: 0 10px 40px rgba(232, 182, 92, 0.2);
+}
+
+.shade-top {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    height: 10px;
+    background: var(--gold-light);
+    border-radius: 50%;
+}
+
+.shade-light {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 10px;
+    background: #ffe9b9;
+    border-radius: 50%;
+}
+
+.light-beam {
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    width: 220px;
+    height: 180px;
+    background: linear-gradient(
+        to bottom,
+        rgba(232, 182, 92, 0.17),
+        transparent
+    );
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+    transform: translateX(-50%);
+}
+
+.lamp-stem {
+    position: absolute;
+    z-index: 3;
+    top: 190px;
+    left: 50%;
+    width: 13px;
+    height: 145px;
+    background: linear-gradient(to right, #815a28, #ffe1a0, #815a28);
+    transform: translateX(-50%);
+}
+
+.lamp-joint {
+    position: absolute;
+    z-index: 4;
+    top: 325px;
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    background: radial-gradient(circle, #ffe1a0, #93672e);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-base {
+    position: absolute;
+    z-index: 4;
+    top: 365px;
+    left: 50%;
+    width: 190px;
+    height: 28px;
+    background: linear-gradient(to bottom, #ffe1a0, #805a2d);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 25px rgba(232, 182, 92, 0.15);
+}
+
+.lamp-shadow {
+    position: absolute;
+    top: 405px;
+    left: 50%;
+    width: 220px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    filter: blur(15px);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-caption {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.lamp-caption span {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--gold);
+}
+
+/* ========================================
+   GOLD DIVIDER
+======================================== */
+
+.gold-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold),
+        transparent
+    );
+}
+
+/* ========================================
+   EXPLORE SECTION
+======================================== */
+
+.home-links {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-title {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: var(--text);
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.home-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.home-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 270px;
+    padding: 28px;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.home-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(232, 182, 92, 0.08);
+}
+
+.card-number {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.home-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin: 30px 0 20px;
+    color: var(--gold);
+    background: rgba(232, 182, 92, 0.08);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.home-card h3 {
+    color: var(--text);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.home-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.card-link {
+    margin-top: auto;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   ENDING SECTION
+======================================== */
+
+.home-ending {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.ending-content {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 30px;
+    text-align: center;
+    background: linear-gradient(145deg, #182019, #0a0e0b);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+}
+
+.ending-content h2 {
+    color: var(--text);
+    font-size: clamp(30px, 4vw, 46px);
+    margin-bottom: 20px;
+}
+
+.ending-content p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    padding: 25px 20px;
+    color: var(--muted);
+    background: #080b09;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .lamp-scene {
+        min-height: 450px;
+    }
+
+    .home-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .page-wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .hero-copy h1 {
+        font-size: 42px;
+    }
+
+    .hero-bottom {
+        gap: 18px;
+    }
+
+    .hero-bottom p {
+        font-size: 8px;
+    }
+
+    .lamp-scene {
+        min-height: 380px;
+    }
+
+    .orbit-one {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orbit-two {
+        width: 250px;
+        height: 250px;
+    }
+
+    .lamp-shade {
+        top: 70px;
+    }
+
+    .lamp-stem {
+        top: 160px;
+        height: 145px;
+    }
+
+    .lamp-joint {
+        top: 295px;
+    }
+
+    .lamp-base {
+        top: 335px;
+    }
+
+    .lamp-shadow {
+        top: 375px;
+    }
+
+    .home-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-links {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .ending-content {
+        padding: 60px 20px;
+    }
+
+}

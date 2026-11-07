@@ -1,0 +1,472 @@
+
+/* ========================================
+   SKILLS PAGE
+======================================== */
+
+:root {
+    --gold: #e8b65c;
+    --gold-light: #ffe1a0;
+    --bg: #080b09;
+    --card: #111712;
+    --text: #f5f3ed;
+    --muted: #a6a69f;
+    --line: rgba(232, 182, 92, 0.2);
+}
+
+/* PAGE LAYOUT */
+
+.skills-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+/* SKILLS HERO */
+
+.skills-hero {
+    max-width: 850px;
+    margin-bottom: 100px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.skills-hero h1 {
+    color: var(--text);
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.skills-intro {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* SKILLS SUMMARY */
+
+.skill-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    margin-top: 45px;
+}
+
+.skill-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-summary span {
+    color: var(--gold);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.skill-summary p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* SKILLS DASHBOARD */
+
+.skills-dashboard {
+    margin-bottom: 110px;
+}
+
+.dashboard-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.dashboard-heading h2 {
+    color: var(--text);
+    font-size: 35px;
+    margin-top: 12px;
+}
+
+.dashboard-number {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* SKILLS GRID */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    padding: 27px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    transition: 0.35s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 30px rgba(232, 182, 92, 0.07);
+}
+
+/* CARD TOP */
+
+.skill-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.skill-number {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.skill-category {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* SKILL ICONS */
+
+.skill-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 23px;
+    color: var(--gold);
+    background: rgba(232, 182, 92, 0.08);
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.html-icon {
+    color: #e98b55;
+}
+
+.css-icon {
+    color: #70a9ed;
+}
+
+.python-icon {
+    color: #e8c65c;
+}
+
+.c-icon {
+    color: #78a9e8;
+}
+
+.tools-icon {
+    color: var(--gold);
+}
+
+.future-icon {
+    color: var(--gold-light);
+}
+
+/* SKILL INFORMATION */
+
+.skill-card h3 {
+    color: var(--text);
+    font-size: 21px;
+    margin-bottom: 13px;
+}
+
+.skill-card > p {
+    min-height: 75px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* SKILL PROGRESS */
+
+.skill-level {
+    margin-top: 25px;
+}
+
+.level-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.level-info span:first-child {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.level-info span:last-child {
+    color: var(--gold);
+    font-size: 10px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+    background: #252b26;
+    border-radius: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--gold-dark, #a87932),
+        var(--gold-light)
+    );
+    border-radius: 10px;
+}
+
+.html-progress {
+    width: 65%;
+}
+
+.css-progress {
+    width: 60%;
+}
+
+.python-progress {
+    width: 40%;
+}
+
+.c-progress {
+    width: 30%;
+}
+
+.tools-progress {
+    width: 50%;
+}
+
+/* FUTURE CARD */
+
+.future-card {
+    border-style: dashed;
+}
+
+.future-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.future-label span {
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+/* LEARNING PHILOSOPHY */
+
+.learning-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    margin-bottom: 110px;
+}
+
+.learning-left h2 {
+    color: var(--text);
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.learning-left > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.learning-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.learning-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 23px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.learning-item:hover {
+    border-color: var(--gold);
+    transform: translateX(5px);
+}
+
+.learning-item > span {
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.learning-item h3 {
+    color: var(--text);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.learning-item p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* ENDING SECTION */
+
+.skills-ending {
+    position: relative;
+    overflow: hidden;
+    padding: 65px 25px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.ending-light {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    background: rgba(232, 182, 92, 0.08);
+    filter: blur(80px);
+    transform: translateX(-50%);
+}
+
+.skills-ending > p,
+.skills-ending h2,
+.skills-ending .btn {
+    position: relative;
+    z-index: 1;
+}
+
+.skills-ending > p {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.skills-ending h2 {
+    color: var(--text);
+    font-size: clamp(27px, 4vw, 42px);
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    color: var(--bg);
+    background: var(--gold);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.site-footer {
+    padding: 25px 20px;
+    color: var(--muted);
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .learning-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .skills-page {
+        padding: 65px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-summary {
+        gap: 25px;
+    }
+
+    .dashboard-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .learning-left h2 {
+        font-size: 31px;
+    }
+
+    .skills-ending {
+        padding: 45px 18px;
+    }
+
+}

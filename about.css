@@ -1,0 +1,505 @@
+
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+:root {
+    --gold: #e8b65c;
+    --gold-light: #ffe1a0;
+    --gold-dark: #a87932;
+    --bg: #080b09;
+    --card: #111712;
+    --text: #f5f3ed;
+    --muted: #a6a69f;
+    --line: rgba(232, 182, 92, 0.2);
+}
+
+/* ========================================
+   MAIN ABOUT SECTION
+======================================== */
+
+.page-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+.about-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+    min-height: 550px;
+    padding: 40px 0 90px;
+}
+
+.about-left {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.about-left h1 {
+    color: var(--text);
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.about-intro {
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-description {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    color: #080b09;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    color: var(--gold);
+    background: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(232, 182, 92, 0.15);
+}
+
+/* ========================================
+   PROFILE CARD
+======================================== */
+
+.about-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+}
+
+.golden-orbit {
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    border: 1px solid rgba(232, 182, 92, 0.3);
+    border-radius: 50%;
+    animation: orbitRotate 18s linear infinite;
+}
+
+.golden-orbit::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 45px;
+    right: 45px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--gold);
+}
+
+.visual-glow {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(232, 182, 92, 0.12);
+    filter: blur(90px);
+    border-radius: 50%;
+}
+
+.profile-card {
+    position: relative;
+    z-index: 2;
+    width: 330px;
+    padding: 30px;
+    background: linear-gradient(145deg, #182019, #0c100d);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.online-dot {
+    width: 9px;
+    height: 9px;
+    background: #70c98b;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #70c98b;
+}
+
+.profile-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    margin: 35px auto 25px;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(232, 182, 92, 0.12);
+}
+
+.profile-card h2 {
+    color: var(--text);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.profile-role {
+    color: var(--gold);
+    font-size: 13px;
+    text-align: center;
+}
+
+.profile-divider {
+    height: 1px;
+    background: var(--line);
+    margin: 25px 0;
+}
+
+.profile-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.profile-detail span {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.profile-detail strong {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.floating-light {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--gold);
+    animation: floatingLight 4s ease-in-out infinite;
+}
+
+.light-one {
+    top: 70px;
+    left: 25px;
+}
+
+.light-two {
+    bottom: 70px;
+    right: 20px;
+    animation-delay: 2s;
+}
+
+/* ========================================
+   ABOUT STATISTICS
+======================================== */
+
+.about-stats-section {
+    padding: 75px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.stats-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.stats-heading h2 {
+    color: var(--text);
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    padding: 30px 20px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.stat-number {
+    display: block;
+    color: var(--gold);
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.stat-box h3 {
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   PERSONAL PHILOSOPHY
+======================================== */
+
+.philosophy-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    padding: 100px 0;
+}
+
+.philosophy-left h2 {
+    color: var(--text);
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.3;
+}
+
+.philosophy-right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.philosophy-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 25px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateX(7px);
+    border-color: var(--gold);
+}
+
+.philosophy-card > span {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.philosophy-card h3 {
+    color: var(--text);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.philosophy-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   ABOUT ENDING SECTION
+======================================== */
+
+.about-ending {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 25px;
+    text-align: center;
+    background: linear-gradient(145deg, #141b15, #0a0d0b);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+}
+
+.ending-glow {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(232, 182, 92, 0.12);
+    filter: blur(100px);
+    transform: translateX(-50%);
+}
+
+.about-ending p {
+    position: relative;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.about-ending h2 {
+    position: relative;
+    color: var(--text);
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 30px;
+}
+
+.about-ending .btn {
+    position: relative;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes orbitRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floatingLight {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-18px);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .about-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-left {
+        max-width: 100%;
+    }
+
+    .about-visual {
+        min-height: 420px;
+    }
+
+    .philosophy-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .page-wrap {
+        padding: 55px 20px;
+    }
+
+    .about-hero {
+        padding-top: 20px;
+    }
+
+    .about-left h1 {
+        font-size: 38px;
+    }
+
+    .about-intro {
+        font-size: 16px;
+    }
+
+    .about-description {
+        font-size: 14px;
+    }
+
+    .golden-orbit {
+        width: 290px;
+        height: 290px;
+    }
+
+    .profile-card {
+        width: min(100%, 310px);
+        padding: 25px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-section {
+        padding: 65px 0;
+    }
+
+    .philosophy-card {
+        padding: 20px;
+    }
+
+    .about-ending {
+        padding: 60px 18px;
+    }
+
+}

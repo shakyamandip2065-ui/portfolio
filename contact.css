@@ -1,0 +1,473 @@
+
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+:root {
+    --gold: #e8b65c;
+    --gold-light: #ffe1a0;
+    --gold-dark: #a87932;
+    --bg: #080b09;
+    --card: #111712;
+    --text: #f5f3ed;
+    --muted: #a6a69f;
+    --line: rgba(232, 182, 92, 0.2);
+}
+
+/* MAIN PAGE */
+
+.contact-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.contact-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    min-height: 550px;
+    padding: 40px 0 80px;
+}
+
+.hero-left {
+    max-width: 580px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero-left h1 {
+    color: var(--text);
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.hero-left p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    color: #080b09;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.main-button:hover {
+    color: var(--gold);
+    background: transparent;
+    transform: translateY(-4px);
+}
+
+/* ========================================
+   CONTACT ILLUSTRATION
+======================================== */
+
+.home-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 430px;
+}
+
+.circle-animation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    height: 340px;
+    padding: 20px;
+    border: 1px solid rgba(232, 182, 92, 0.6);
+    border-radius: 50%;
+    animation: circleRotate 20s linear infinite;
+}
+
+.circle-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 270px;
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(145deg, #1b241c, #0b100d);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(232, 182, 92, 0.1);
+    animation: circleRotateReverse 20s linear infinite;
+}
+
+.code-symbol {
+    color: var(--gold);
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.circle-inner h3 {
+    color: var(--text);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.circle-inner h2 {
+    color: var(--gold);
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 2px;
+}
+
+.circle-inner h2 span {
+    display: block;
+    color: var(--text);
+}
+
+.floating-card {
+    position: absolute;
+    z-index: 2;
+    padding: 12px 20px;
+    color: var(--gold);
+    background: #141b15;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: floating 4s ease-in-out infinite;
+}
+
+.card-one {
+    top: 30px;
+    left: 10px;
+}
+
+.card-two {
+    top: 80px;
+    right: 0;
+    animation-delay: 1s;
+}
+
+.card-three {
+    bottom: 80px;
+    left: 0;
+    animation-delay: 2s;
+}
+
+.card-four {
+    bottom: 25px;
+    right: 15px;
+    animation-delay: 3s;
+}
+
+/* ========================================
+   SECTION DIVIDER
+======================================== */
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    margin: 30px 0 80px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold),
+        transparent
+    );
+}
+
+/* ========================================
+   CONNECT SECTION
+======================================== */
+
+.connect-section {
+    padding: 20px 0 90px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    color: var(--text);
+    font-size: clamp(30px, 4vw, 45px);
+}
+
+.connect-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.connect-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 135px;
+    padding: 25px;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.connect-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 30px rgba(232, 182, 92, 0.08);
+}
+
+.card-number {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    color: var(--gold);
+    background: rgba(232, 182, 92, 0.08);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.connect-card h3 {
+    color: var(--text);
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.connect-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.card-arrow {
+    margin-left: auto;
+    color: var(--gold);
+    font-size: 22px;
+}
+
+/* ========================================
+   CLOSING SECTION
+======================================== */
+
+.closing-section {
+    padding: 75px 25px;
+    text-align: center;
+    background: linear-gradient(145deg, #151d16, #0b100d);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+.closing-section h2 {
+    color: var(--text);
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 20px;
+}
+
+.closing-section p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 13px 24px;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    color: #080b09;
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 6%;
+    background: #080b09;
+    border-top: 1px solid var(--line);
+}
+
+.footer-logo {
+    color: var(--text);
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: var(--gold);
+}
+
+.site-footer p {
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-note {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes circleRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circleRotateReverse {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 850px) {
+
+    .contact-hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .connect-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding: 50px 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 40px;
+    }
+
+    .home-image {
+        min-height: 350px;
+    }
+
+    .circle-animation {
+        width: 280px;
+        height: 280px;
+    }
+
+    .circle-inner {
+        width: 220px;
+        height: 220px;
+    }
+
+    .circle-inner h2 {
+        font-size: 12px;
+    }
+
+    .floating-card {
+        padding: 9px 13px;
+        font-size: 11px;
+    }
+
+    .connect-card {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
